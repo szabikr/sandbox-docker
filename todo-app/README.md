@@ -18,11 +18,12 @@
 - Interactive terminal: `$ docker exec -i <the-container-id> /bin/bash` (in case of node instances use `/bin/sh`)
 - Execute one command and close the connection: `$ docker exec <the-container-id> cat /data.txt`; this will retrieve the contents of `data.txt` from inside the docker container
 
-### Volumes
+### Named volumes
 
 - Create named value: `$ docker volume create todo-db`
 - Run docker container with named volume: `$ docker run -dp 3000:3000 -v todo-db:/etc/todos todo-app`; `-v` flag specifies the volume
 - Get details about the named volume: `$ docker volume inspect todo-db`
+- List all volumes: `$ docker volume ls`
 
 ### Inspiration
 
